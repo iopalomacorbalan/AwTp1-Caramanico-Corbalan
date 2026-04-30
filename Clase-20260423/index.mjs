@@ -13,7 +13,7 @@ const obtenerCosas = (res, req ) => {
 
 app.get( `/`, obtenerCosas)
 
-app.get = (`/`, (res, req) =>{
+app.get = (`/`, (req, res) =>{
    
     res.end (`Estoy en post`)
 })
