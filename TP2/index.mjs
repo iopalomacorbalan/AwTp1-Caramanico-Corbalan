@@ -1,12 +1,11 @@
 import express from "express";
 
 const app = express();
-const PORT = 3000;
+const PUERTO = 3000;
 
-// TU API
+
 const API_URL = "https://69f00887112e1b968e2526cd.mockapi.io/api/v1/propiedades";
 
-// Obtener propiedades
 app.get("/api/propiedades", async (req, res) => {
     try {
         const response = await fetch(API_URL);
@@ -36,7 +35,6 @@ app.get("/api/propiedades", async (req, res) => {
     }
 });
 
-// Obtener por ID
 app.get("/api/propiedades/:id", async (req, res) => {
     try {
         const response = await fetch(`${API_URL}/${req.params.id}`);
@@ -47,7 +45,6 @@ app.get("/api/propiedades/:id", async (req, res) => {
     }
 });
 
-// Servidor
-app.listen(PORT, () => {
-    console.log(`Servidor en http://localhost:${PORT}`);
+app.listen(PUERTO, () => {
+    console.log(`Servidor en http://localhost:${PUERTO}`);
 });
